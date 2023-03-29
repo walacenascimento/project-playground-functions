@@ -1,32 +1,64 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+// Resolvido.
+function compareTrue(valor1, valor2) {
+  if (valor1 === true && valor2 === true) {
+    return true;
+  }
+  return false;
 }
+compareTrue();
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+// Resolvido
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
+calcArea();
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+// Resolvido
+function splitSentence(str) {
+  return str.split(' ');
 }
+splitSentence('');
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+// Resolvido
+function concatName(arrayStr) {
+  return `${arrayStr[arrayStr.length - 1]}, ${arrayStr[0]}`;
 }
+concatName([]);
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+// Resolvido
+function footballPoints(wins, ties) {
+  const pointWins = 3;
+  const pointTies = 1;
+  return (pointWins * wins) + (pointTies * ties);
 }
+footballPoints();
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+// Resolvido
+function highestCount(arrayNumber) {
+  let maiorNumero = Math.max(...arrayNumber);
+  let repete = 0;
+  for (let index = 0; index < arrayNumber.length; index += 1) {
+    if (arrayNumber[index] === maiorNumero) {
+      repete += 1;
+    }
+  }
+  return repete;
+  // let maior = Math.max(...arrayNumber);
+  // let repete = 0;
+  // for (let i = 0; i < arrayNumber.length; i += 1) {
+  //   if (arrayNumber[i] === maior) {
+  //     repete += 1;
+  //   }
+  // }
+  // return console.log(repete);
 }
+highestCount([]);
 
 // Desafio 7
 function catAndMouse() {
