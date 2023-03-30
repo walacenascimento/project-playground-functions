@@ -87,9 +87,27 @@ catAndMouse();
 
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayNumbers) {
   // seu código aqui
+  let fizzBuzz = [];
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if(arrayNumbers[index] % 3 == 0 && arrayNumbers[index] % 5 == 0) {
+      // se for divisivel por 3 e 5 retorna 'fizzBuss'
+      fizzBuzz.push('fizzBuzz');
+    } else if(arrayNumbers[index] % 3 == 0) {
+      // se for divisivel por 3 retorna 'fizz'
+      fizzBuzz.push('fizz');
+    } else if(arrayNumbers[index] % 5 == 0) {
+      // se for divisivel por 5 retorna 'buzz'
+      fizzBuzz.push('buzz');
+    } else {
+      // caso, não seja divisível nem por 3 e nem por 5, retorna 'bug!'
+      fizzBuzz.push('bug!');
+    }
+  }
+  return (fizzBuzz);
 }
+fizzBuzz([]);
 
 // Desafio 9
 function encode() {
