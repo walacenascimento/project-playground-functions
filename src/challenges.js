@@ -61,9 +61,30 @@ function highestCount(arrayNumber) {
 highestCount([]);
 
 // Desafio 7
-function catAndMouse() {
+// cat1, cat2 e mouse
+// recebe posição de mouse, cat1 e cat2 (nessa ordem)
+// e calcula a distânia entre mouse e cat1 e cat2
+// e retorna o cat mais perto do mouse
+// Exemplo:
+// caso o gato cat2 esteja a 2 unidades de distância do rato, e cat1 esteja a 3 unidades, sua função deverá retornar "cat2".
+// Caso os gatos estejam na mesma distância do rato, a função deverá retornar a string "os gatos trombam e o rato foge".
+
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-}
+  // return ((Math.abs(cat1 - mouse) < Math.abs(mouse - cat2)) ? "cat1" : ((Math.abs(cat1 - mouse)) > Math.abs(mouse - cat2) ? "cat2" : "os gatos trombam e o rato foge"));
+
+  const positioCat1 = Math.abs(cat1 - mouse);
+  const positioCat2 = Math.abs(cat2 - mouse);
+
+  if (positioCat2 < positioCat1) {
+    return "cat2";
+  } else if(positioCat2 > positioCat1) {
+    return "cat1";
+  }
+    return "os gatos trombam e o rato foge";
+ }
+catAndMouse();
+
 
 // Desafio 8
 function fizzBuzz() {
