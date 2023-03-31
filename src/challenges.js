@@ -61,14 +61,7 @@ function highestCount(arrayNumber) {
 highestCount([]);
 
 // Desafio 7
-// cat1, cat2 e mouse
-// recebe posição de mouse, cat1 e cat2 (nessa ordem)
-// e calcula a distânia entre mouse e cat1 e cat2
-// e retorna o cat mais perto do mouse
-// Exemplo:
-// caso o gato cat2 esteja a 2 unidades de distância do rato, e cat1 esteja a 3 unidades, sua função deverá retornar "cat2".
-// Caso os gatos estejam na mesma distância do rato, a função deverá retornar a string "os gatos trombam e o rato foge".
-
+// Resolvido
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   // return ((Math.abs(cat1 - mouse) < Math.abs(mouse - cat2)) ? "cat1" : ((Math.abs(cat1 - mouse)) > Math.abs(mouse - cat2) ? "cat2" : "os gatos trombam e o rato foge"));
@@ -85,8 +78,8 @@ function catAndMouse(mouse, cat1, cat2) {
  }
 catAndMouse();
 
-
 // Desafio 8
+// Resolvido
 function fizzBuzz(arrayNumbers) {
   // seu código aqui
   let fizzBuzz = [];
@@ -110,12 +103,23 @@ function fizzBuzz(arrayNumbers) {
 fizzBuzz([]);
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+// Em encode, substituir as vogais por numeros, da seguinte forma:
+// a -> 1, e -> 2, i -> 3, o -> 4, u -> 5
+// Em decode, fazer o inverso:
+// 1 -> a, 2 -> e, 3 -> i, 4 -> o, 5 -> u
+function encode(str) {
+  // a -> 1, e -> 2, i -> 3, o -> 4, u -> 5
+  let text = str.replaceAll('a',1).replaceAll('e',2).replaceAll('i',3).replaceAll('o',4).replaceAll('u',5);
+  return text
 }
-function decode() {
-  // seu código aqui
+encode('');
+
+function decode(str) {
+  // 1 -> a, 2 -> e, 3 -> i, 4 -> o, 5 -> u
+  let text = str.replaceAll(1,'a').replaceAll(2,'e').replaceAll(3,'i').replaceAll(4,'o').replaceAll(5,'u');
+  return text
 }
+decode('');
 
 module.exports = {
   calcArea,
